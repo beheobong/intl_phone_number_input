@@ -65,6 +65,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   final bool formatInput;
   final bool autoFocus;
   final bool autoFocusSearch;
+  final bool obscureText;
   final AutovalidateMode autoValidateMode;
   final bool ignoreBlank;
   final bool countrySelectorScrollControlled;
@@ -108,6 +109,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
       this.isEnabled = true,
       this.formatInput = true,
       this.autoFocus = false,
+      this.obscureText = false,
       this.autoFocusSearch = false,
       this.autoValidateMode = AutovalidateMode.disabled,
       this.ignoreBlank = false,
@@ -437,6 +439,7 @@ class _InputWidgetView
               onFieldSubmitted: widget.onFieldSubmitted,
               autovalidateMode: widget.autoValidateMode,
               autofillHints: widget.autofillHints,
+              obscureText: widget.obscureText,
               validator: widget.validator ?? state.validator,
               onSaved: state.onSaved,
               scrollPadding: widget.scrollPadding,
